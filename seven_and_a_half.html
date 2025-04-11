@@ -1,0 +1,81 @@
+<!--  Jesús Basallote Gallardo 3r GEINF  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven and a Half</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Seven and a Half</h1>
+    </header>
+
+    <section class="inici" id="menuInici">
+        <h2>Welcome to Seven and a Half</h2>
+        <h3>Put your name:</h3>
+        <input type="text" id="nomIntro" placeholder="Player name">
+        <h3>Put the money to play with:</h3>
+        <input type="text" id="dinerIntro" placeholder="Player balance">
+        <div class="dinerBotons">
+            <button class="dinerConfirma" onclick="carregarJoc()">Confirm Balance</button>
+            <button class="dinerCancela" onclick="cancelarcarregarJoc()">Cancel</button>
+        </div>
+        
+    </section>
+    
+    <!-- Àrea de joc -->
+    <main class="joc" id="taulaJoc" style="visibility: hidden;">
+        <!-- Secció de cartes i puntuación -->
+        <div class="zonaCartes">
+            
+            <!-- Cartes del crupier -->
+            <section class="zonaCrupier">
+                <h2>Dealer's Cards</h2>
+                <div class="taulaCartes" id="taulaCartesCrupier">
+                    <div class="carta" id="dummyCarta" style="visibility: hidden;"></div>
+                </div>
+            </section>
+
+            <div class="score">
+                <p>Dealer's Score: <span id="puntCrupier">0</span></p>
+            </div>
+            <!-- Cartes del jugador -->
+            <section class="zonaJugador">
+                <h2>Your Cards</h2>
+                <div class="taulaCartes"id="taulaCartesJuga">
+                    <div class="carta" id="dummyCarta" style="visibility: hidden;"></div>
+                </div>
+            </section>
+
+            <!-- Puntuació -->
+            <div class="score">
+                <p><span id="puntJugaNom"></span>'s Score: <span id="puntJuga">0</span></p>
+            </div>
+
+            <!-- Botons del joc, els botons es creen dinàmicament -->
+            <div id="btAccions" class="actions"></div>            
+            
+        </div>
+
+        <!-- Panell d'Apostes -->
+        <section class="zonaApostes">
+            <h2>Bet Zone</h2>
+            <p>Player Balance: <span id="balance">1000</span> €</p>
+            <p>Bet: <span id="apostaActual">0</span> €</p>
+            <input type="text" id="introAposta" placeholder="Put your bet">
+            <div id="zonaBtAposta" class="botonsAposta">
+                <!-- Botons de l'aposta, els botons es creen dinàmicament -->
+            </div> 
+            <div id="log" class="missatgeLog"></div>
+        </section>        
+    </main>  
+    <!-- Peu de pàgina -->  
+    <footer id="peuPag" >
+        <p>Seven and a Half | Jesús Basallote Gallardo</p>
+    </footer>
+</body>
+</html>
